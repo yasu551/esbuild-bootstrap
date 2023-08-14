@@ -1,0 +1,4 @@
+.container.w-50.py-3.d-flex.flex-column.gap-3
+  = render 'form', task: @task
+  = turbo_frame_tag :tasks do
+    = render partial: 'task', collection: @tasks
