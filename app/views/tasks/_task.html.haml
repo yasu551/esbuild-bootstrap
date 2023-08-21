@@ -1,3 +1,8 @@
-.card
-  .card-body
-    %p.mb-0= task.name
+= turbo_frame_tag task do
+  %form.tasks-index__task{ class: task_state_class(task:),
+                           action: task_url(task),
+                           method: :patch,
+                           data: { controller: 'task-state',
+                                   action: 'long-press->task-state#update_state' } }
+    .tasks-index__task-name= task.name
+    .tasks-index__task-state{ class: task_state_class(task:) }= task.state

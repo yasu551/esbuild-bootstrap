@@ -1,7 +1,8 @@
 import { Controller } from "@hotwired/stimulus"
 
+// Connects to data-controller="task-state"
 export default class extends Controller {
-  connect() {
-    this.element.textContent = "Hello World!"
+  update_state() {
+    this.element.requestSubmit();
   }
 }

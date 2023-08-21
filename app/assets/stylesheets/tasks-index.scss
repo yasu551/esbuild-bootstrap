@@ -1,0 +1,47 @@
+$todo-color: rgb(35, 134, 54);
+$progress-color: rgb(158, 106, 3);
+$done-color: rgb(137, 87, 229);
+
+.tasks-index__task {
+  padding: 12px 24px;
+  cursor: pointer;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+
+  &.is-todo {
+    border: 1px solid $todo-color;
+  }
+
+  &.is-progress {
+    border: 1px solid $progress-color;
+  }
+
+  &.is-done {
+    border: 1px solid $done-color;
+  }
+}
+
+.tasks-index__task-name {
+  font-size: 16px;
+  margin-bottom: 0;
+}
+
+.tasks-index__task-state {
+  font-size: 10px;
+  color: #ffffff;
+  padding: 4px 8px;
+  border-radius: 6px;
+
+  &.is-todo {
+    background-color: $todo-color;
+  }
+
+  &.is-progress {
+    background-color: $progress-color;
+  }
+
+  &.is-done {
+    background-color: $done-color;
+  }
+}
