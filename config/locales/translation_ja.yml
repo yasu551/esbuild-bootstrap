@@ -1,0 +1,9 @@
+ja:
+  activerecord:
+    models:
+      task: タスク  #g
+
+    attributes:
+      task:
+        name: 名前  #g
+        state: 州  #g
