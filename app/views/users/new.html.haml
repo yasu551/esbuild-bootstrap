@@ -1,6 +1,6 @@
 .container.w-50.py-3.d-flex.flex-column.gap-3
   %h1.fs-3 ユーザー登録
-  = simple_form_for @user do |f|
+  = simple_form_for @user, html: { 'data-controller': :numeral } do |f|
     = f.input :name
-    = f.input :annual_income
-    = f.submit class: 'btn btn-primary'
+    = f.input :annual_income, as: :string, input_html: { data: { action: 'numeral#format', 'numeral-target': :input } }
+    = f.submit class: 'btn btn-primary', 'data-action': 'numeral#submit'

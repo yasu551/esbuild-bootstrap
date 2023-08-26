@@ -124,7 +124,7 @@ ja:
     currency:
       format:
         delimiter: ","
-        format: "%n%u"
+        format: "%n %u"
         precision: 0
         separator: "."
         significant: false

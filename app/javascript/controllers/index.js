@@ -4,5 +4,8 @@
 
 import { application } from "./application"
 
+import NumeralController from "./numeral_controller"
+application.register("numeral", NumeralController)
+
 import TaskStateController from "./task_state_controller"
 application.register("task-state", TaskStateController)
