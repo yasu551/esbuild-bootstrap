@@ -5,5 +5,5 @@
     .col= number_to_currency(@user.annual_income)
   .row
     .col-2 電話番号
-    .col= @user.phone_number
+    .col= link_to @user.phone_number, "tel:#{@user.phone_number}"
   = link_to '編集', edit_user_path(@user)

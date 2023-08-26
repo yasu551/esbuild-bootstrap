@@ -1,5 +1,5 @@
 = simple_form_for user, html: { 'data-controller': :numeral } do |f|
   = f.input :name
   = f.input :annual_income, as: :string, input_html: { data: { action: 'numeral#format', 'numeral-target': :input } }
-  = f.input :phone_number
+  = f.input :phone_number, input_html: { data: { controller: 'phone-number', action: 'phone-number#format' } }
   = f.submit class: 'btn btn-primary', 'data-action': 'numeral#submit'

@@ -7,5 +7,8 @@ import { application } from "./application"
 import NumeralController from "./numeral_controller"
 application.register("numeral", NumeralController)
 
+import PhoneNumberController from "./phone_number_controller"
+application.register("phone-number", PhoneNumberController)
+
 import TaskStateController from "./task_state_controller"
 application.register("task-state", TaskStateController)

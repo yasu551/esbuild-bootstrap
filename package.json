@@ -9,6 +9,7 @@
     "bootstrap": "^5.3.1",
     "bootstrap-icons": "^1.10.5",
     "esbuild": "^0.19.1",
+    "google-libphonenumber": "^3.2.33",
     "long-press-event": "^2.4.6",
     "nodemon": "^3.0.1",
     "numeral": "^2.0.6",
