@@ -1,9 +1,14 @@
 ja:
   activerecord:
     models:
-      task: タスク  #g
+      task: タスク
+      user: ユーザー
 
     attributes:
       task:
-        name: 名前  #g
-        state: 州  #g
+        name: 名前
+        state: 状態
+
+      user:
+        annual_income: 年収
+        name: 名前
