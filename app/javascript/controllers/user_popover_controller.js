@@ -15,7 +15,7 @@ export default class extends Controller {
     const left = elementRect['left'];
     const contentHeight = this.contentTarget.offsetHeight;
     const diff = elementTop - contentHeight;
-    const top = diff > 0 ? diff : (elementTop + elementHeight);
+    const top = diff > 0 ? (diff + window.scrollY) : (elementTop + elementHeight + window.scrollY);
     this.contentTarget.style = `top: ${top}px; left: ${left}px`;
   }
 
