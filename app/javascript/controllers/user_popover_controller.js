@@ -9,6 +9,14 @@ export default class extends Controller {
   }
   show() {
     this.contentTarget.showPopover();
+    const elementRect = this.element.getBoundingClientRect();
+    const elementTop = elementRect['top'];
+    const elementHeight = elementRect['height'];
+    const left = elementRect['left'];
+    const contentHeight = this.contentTarget.offsetHeight;
+    const diff = elementTop - contentHeight;
+    const top = diff > 0 ? diff : (elementTop + elementHeight);
+    this.contentTarget.style = `top: ${top}px; left: ${left}px`;
   }
 
   hide() {
