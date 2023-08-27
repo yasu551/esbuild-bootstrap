@@ -1,3 +1,17 @@
-.card.w-100
+%button.card.w-100{ popovertarget: dom_id(user) }
   .card-body
     = user.name
+
+.user__popover-content{ id: dom_id(user), popover: :manual }
+  .user__popover-row
+    .user__popover-key 名前
+    .user__popover-value= user.name
+  .user__popover-row
+    .user__popover-key 年収
+    .user__popover-value= number_to_currency(user.annual_income) if user.annual_income.present?
+  .user__popover-row
+    .user__popover-key 電話番号
+    .user__popover-value= link_to user.phone_number, "tel:#{user.phone_number}" if user.phone_number.present?
+  .user__popover-row
+    .user__popover-key プロフィール
+    .user__popover-value= user.profile
