@@ -12,3 +12,6 @@ application.register("phone-number", PhoneNumberController)
 
 import TaskStateController from "./task_state_controller"
 application.register("task-state", TaskStateController)
+
+import UserPopoverController from "./user_popover_controller"
+application.register("user-popover", UserPopoverController)
