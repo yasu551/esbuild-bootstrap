@@ -10,6 +10,9 @@ application.register("numeral", NumeralController)
 import PhoneNumberController from "./phone_number_controller"
 application.register("phone-number", PhoneNumberController)
 
+import TaskModalController from "./task_modal_controller"
+application.register("task-modal", TaskModalController)
+
 import TaskStateController from "./task_state_controller"
 application.register("task-state", TaskStateController)
 

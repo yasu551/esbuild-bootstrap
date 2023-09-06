@@ -1,9 +1,12 @@
 class TasksController < ApplicationController
-  before_action :set_task, only: %i[update]
+  before_action :set_task, only: %i[show update]
 
   def index
     @task = Task.new
     @tasks = Task.default_order
+  end
+
+  def show
   end
 
   def create

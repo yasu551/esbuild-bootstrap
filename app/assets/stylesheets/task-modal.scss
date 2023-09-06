@@ -1,0 +1,26 @@
+.task-modal {
+  border: 1px solid $gray-300;
+  border-radius: 8px;
+  width: 500px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.task-modal__header {
+  font-size: 24px;
+  padding-inline: 8px;
+  border-bottom: 1px solid $gray-300;
+}
+
+.task-modal__body {
+  padding-inline: 8px;
+  border-bottom: 1px solid $gray-300;
+}
+
+.task-modal__footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}

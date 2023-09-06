@@ -2,3 +2,4 @@
   = render 'form', task: @task
   = turbo_frame_tag :tasks, class: 'd-flex flex-column gap-1' do
     = render partial: 'task', collection: @tasks
+= turbo_frame_tag :modal
