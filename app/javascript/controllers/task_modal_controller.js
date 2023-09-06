@@ -1,14 +1,15 @@
 import { Controller } from '@hotwired/stimulus'
 
 export default class extends Controller {
-  static targets = ['closeButton'];
+  static targets = ['wrapper', 'modal', 'closeButton'];
 
   connect() {
-    this.element.showModal();
+    this.wrapperTarget.style.display = 'flex';
+    this.modalTarget.showModal();
   }
 
   close() {
-    this.element.style.display = 'none';
-    this.element.close();
+    this.wrapperTarget.style.display = 'none';
+    this.modalTarget.close();
   }
 }
