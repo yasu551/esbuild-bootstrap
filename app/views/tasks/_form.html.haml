@@ -1,3 +1,4 @@
-= simple_form_for task do |f|
+= simple_form_for task, html: { class: 'tasks-index__form' } do |f|
   = f.input :name, label: false, placeholder: 'タスク名を入力してください'
+  = f.input :description, label: false, placeholder: 'タスクの説明を入力してください'
   = f.submit '作成', class: 'btn btn-primary'

@@ -2,6 +2,12 @@ $todo-color: rgb(35, 134, 54);
 $progress-color: rgb(158, 106, 3);
 $done-color: rgb(137, 87, 229);
 
+.tasks-index__form {
+  padding: 16px;
+  border: 1px solid $gray-300;
+  border-radius: 8px;
+}
+
 .tasks-index__task {
   padding: 12px 24px;
   cursor: pointer;
