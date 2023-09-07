@@ -1,11 +1,10 @@
 = turbo_frame_tag :modal do
-  %div{ 'data-controller': 'task-modal' }
-    .task-modal__wrapper{ data: { 'task-modal-target': :wrapper, action: 'click->task-modal#close' } }
-      %dialog.task-modal{ 'data-task-modal-target': :modal }
-        .task-modal__header
-          = @task.name
-        .task-modal__body
-          %pre= @task.description
-        .task-modal__footer
-          %button.btn.btn-secondary{ type: :button, data: { 'task-modal-target': :closeButton, action: 'task-modal#close' } }
-            閉じる
+  %dialog.task-modal{ data: { controller: 'task-modal', action: 'click->task-modal#close' } }
+    .task-modal__container
+      .task-modal__header
+        = @task.name
+      .task-modal__body
+        %pre= @task.description
+      .task-modal__footer
+        %button.btn.btn-secondary{ type: :button, data: { 'task-modal-target': :closeButton, action: 'task-modal#close' } }
+          閉じる
