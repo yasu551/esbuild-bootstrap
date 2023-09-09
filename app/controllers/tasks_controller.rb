@@ -12,14 +12,13 @@ class TasksController < ApplicationController
   def create
     @task = Task.new(task_params)
     unless @task.save
-      render :index
+      @tasks = Task.default_order
+      render :index, status: :unprocessable_entity
     end
   end
 
   def update
-    unless @task.update_next_state
-      render :index
-    end
+    @task.update_next_state!
   end
 
   private

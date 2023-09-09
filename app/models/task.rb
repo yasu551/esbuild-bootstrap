@@ -7,8 +7,8 @@ class Task < ApplicationRecord
 
   scope :default_order, -> { order(id: :desc) }
 
-  def update_next_state
-    update(state: next_state)
+  def update_next_state!
+    update!(state: next_state)
   end
 
   private
