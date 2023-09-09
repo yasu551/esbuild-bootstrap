@@ -18,7 +18,7 @@ class TasksController < ApplicationController
   end
 
   def update
-    @task.update_next_state!
+    @task.update_to_next_state!
   end
 
   private
