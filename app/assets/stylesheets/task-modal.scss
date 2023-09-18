@@ -1,8 +1,7 @@
 .task-modal {
   border: 1px solid $gray-300;
   border-radius: 8px;
-  height: 199px;
-  overscroll-behavior-y: none;
+  width: 500px;
 
   &::backdrop {
     background-color: rgba(128, 128, 128, 0.2);
@@ -10,8 +9,6 @@
 }
 
 .task-modal__container {
-  width: 500px;
-  height: 200px;
   padding: 16px;
   display: flex;
   flex-direction: column;
