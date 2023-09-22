@@ -5,15 +5,23 @@ import numeral from 'numeral'
 export default class extends Controller {
   static targets = ['input'];
 
+  connect() {
+    this.numberFormat = new Intl.NumberFormat();
+  }
+
   inputTargetConnected(element) {
-    element.value = numeral(element.value).format();
+    element.value = this.numberFormat.format(element.value);
   }
 
   format(event) {
-    event.target.value = numeral(event.target.value).format();
+    event.target.value = this.numberFormat.format(event.target.value);
   }
 
-  submit(event) {
-    this.inputTargets.forEach(input => input.value = numeral(input.value).value());
+  submit() {
+    this.inputTargets.forEach(input => input.value = this._unformat(input.value));
+  }
+
+  _unformat(formattedNumber) {
+    return formattedNumber.replace(/,/g, '');
   }
 }
