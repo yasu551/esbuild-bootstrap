@@ -1,5 +1,4 @@
 import { Controller } from '@hotwired/stimulus'
-import numeral from 'numeral'
 
 // Connects to data-controller="numeral"
 export default class extends Controller {
